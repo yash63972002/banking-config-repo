@@ -1,4 +1,3 @@
-
 server:
   port: 8080
 
@@ -55,7 +54,7 @@ spring:
         - id: customer-service
           uri: lb://CUSTOMER-SERVICE
           predicates:
-            - Path=/api/customers/**
+            - Path=/api/customers/**, /api/kyc/**
           filters:
             - StripPrefix=1
 
